@@ -30,11 +30,11 @@ model Wallet {
 
   created_at DateTime @default(now())
 
-  userId     String @map("user_id")
-  currencyId String @map("currency_id")
+  user_id     String
+  currency_id String
 
-  users      User     @relation(fields: [userId], references: [id])
-  currencies Currency @relation(fields: [currencyId], references: [id])
+  users      User     @relation(fields: [user_id], references: [id])
+  currencies Currency @relation(fields: [currency_id], references: [id])
 
   @@map("wallets")
 }
@@ -57,11 +57,12 @@ model Order {
   currency_amount  Float
   source_wallet_id String
 
-  created_at DateTime @default(now())
+  created_at DateTime  @default(now())
+  deleted_at DateTime?
 
-  userId String @map("user_id")
+  user_id String
 
-  users User @relation(fields: [userId], references: [id])
+  users User @relation(fields: [user_id], references: [id])
 
   @@map("orders")
 }
