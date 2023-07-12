@@ -37,6 +37,7 @@ CREATE TABLE "orders" (
     "currency_amount" DOUBLE PRECISION NOT NULL,
     "source_wallet_id" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "deleted_at" TIMESTAMP(3),
     "user_id" TEXT NOT NULL,
 
     CONSTRAINT "orders_pkey" PRIMARY KEY ("id")
