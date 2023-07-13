@@ -6,6 +6,17 @@ import { OrdersRepository } from '../orders-repository';
 export class InMemoryOrdersRepository implements OrdersRepository {
   public items: Order[] = [];
 
+  async findById(id: string) {
+    const order = this.items
+      .find(item => item.id === id);
+
+    if (!order || order.deleted_at !== null) {
+      return null;
+    }
+
+    return order;
+  }
+
   async findManyActive(page: number, date: Date, user_id?: string) {
     const startOfTheDay = dayjs(date).startOf('date');
     const endOfTheDay = dayjs(date).endOf('date');

@@ -1,7 +1,12 @@
 import { OrdersRepository } from '@/repositories/orders-repository';
+import { Order } from '@prisma/client';
 
 interface FetchActiveOrdersUseCaseRequest {
   page: number;
+}
+
+interface FetchActiveOrdersUseCaseResponse {
+  orders: Order[];
 }
 
 export class FetchActiveOrdersUseCase {
@@ -9,7 +14,7 @@ export class FetchActiveOrdersUseCase {
 
   async execute({
     page
-  }: FetchActiveOrdersUseCaseRequest) {
+  }: FetchActiveOrdersUseCaseRequest): Promise<FetchActiveOrdersUseCaseResponse> {
     const orders = await this.ordersRepository.findManyActive(page, new Date());
 
     return {

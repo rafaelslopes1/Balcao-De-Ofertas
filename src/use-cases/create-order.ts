@@ -1,15 +1,20 @@
 import { OrdersRepository } from '@/repositories/orders-repository';
 import { WalletsRepository } from '@/repositories/wallets-repository';
+import { Order } from '@prisma/client';
 import { DailyOrderLimitExceeded } from './errors/daily-order-limit-exceeded-error';
 import { InsufficientBalanceError } from './errors/insufficient-balance-error';
 import { ResourceNotFoundError } from './errors/resource-not-found-error';
 import { UnauthorizedError } from './errors/unauthorized-error';
 
-interface CreateOrderUseCaseInput {
+interface CreateOrderUseCaseRequest {
   priceUsd: number;
   currencyAmount: number;
   sourceWalletId: string;
   userId: string;
+}
+
+interface CreateOrderUseCaseResponse {
+  order: Order
 }
 
 export class CreateOrderUseCase {
@@ -23,7 +28,7 @@ export class CreateOrderUseCase {
     currencyAmount,
     sourceWalletId,
     userId
-  }: CreateOrderUseCaseInput) {
+  }: CreateOrderUseCaseRequest): Promise<CreateOrderUseCaseResponse> {
     const wallet = await this.walletRepository.findById(sourceWalletId);
 
     if (!wallet) {
