@@ -277,6 +277,34 @@ Durante o teste da API, você pode utilizar os IDs de usuário, carteira e moeda
 
 Por exemplo, ao criar uma nova oferta associada a uma carteira específica, utilize o ID da carteira e o ID do usuário correspondentes. Da mesma forma, ao excluir uma oferta, verifique se o ID da oferta pertence ao usuário correto.
 
+## Verificar dados no banco de dados com Prisma Studio
+
+O Prisma Studio é uma ferramenta de desenvolvimento para gerenciamento de banco de dados, que oferece uma interface visual intuitiva para explorar, visualizar e manipular os dados armazenados no banco de dados. Com o Prisma Studio, você pode inspecionar as tabelas, executar consultas interativas e realizar modificações nos dados, facilitando a verificação e o gerenciamento dos dados do projeto.
+
+### Passos
+
+1. Com o terminal aberto, navegue até o diretório raiz do projeto.
+
+```bash
+cd desafio-eclipseworks
+```
+
+2. Execute o seguinte comando para abrir o Prisma Studio:
+
+```bash
+npx prisma studio
+```
+
+O Prisma Studio iniciará e abrirá uma nova janela ou guia do navegador com a interface do usuário.
+
+3. Na interface do Prisma Studio, você poderá navegar pelas tabelas do banco de dados no painel central e visualizar os campos e registros presentes em cada tabela.
+
+4. Para realizar consultas interativas, você pode usar as ferramentas presentes no canto superior esquerdo, podendo filtrar os registros com base em valores específicos, selecionar os campos exibidos e selecionar a quantidade de registros exibidos. Além disso, você pode clicar em um registro para editar seus valores.
+
+5. Utilize as opções fornecidas pelo Prisma Studio para adicionar, editar ou excluir registros do banco de dados, conforme necessário. Certifique-se de ter cuidado ao realizar alterações, pois as modificações serão aplicadas diretamente no banco de dados.
+
+6. Quando terminar de usar o Prisma Studio, você pode fechá-lo pressionando Ctrl+C no terminal e fechando a janela ou guia do navegador.
+
 ## Melhorias e considerações futuras
 
 Durante o desenvolvimento do projeto e ao analisar sua arquitetura e implementação, identifiquei algumas melhorias e pontos de consideração para o futuro. De maneira geral, as melhorias aqui descritas visam aprimorar o desempenho, escalabilidade e manutenibilidade do projeto, seguindo boas práticas de desenvolvimento. Abaixo estão algumas das melhorias sugeridas:
