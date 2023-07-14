@@ -2,7 +2,7 @@ import { InMemoryOrdersRepository } from '@/repositories/in-memory/in-memory-ord
 import { InMemoryWalletsRepository } from '@/repositories/in-memory/in-memory-wallets-repository';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { CreateOrderUseCase } from './create-order';
-import { DailyOrderLimitExceeded } from './errors/daily-order-limit-exceeded-error';
+import { DailyOrderLimitExceededError } from './errors/daily-order-limit-exceeded-error';
 import { InsufficientBalanceError } from './errors/insufficient-balance-error';
 import { UnauthorizedError } from './errors/unauthorized-error';
 
@@ -91,6 +91,6 @@ describe('Create Order Use Case', async () => {
         priceUsd: 10.54,
         sourceWalletId: 'source-wallet-id-01'
       })
-    ).rejects.toBeInstanceOf(DailyOrderLimitExceeded);
+    ).rejects.toBeInstanceOf(DailyOrderLimitExceededError);
   });
 });
