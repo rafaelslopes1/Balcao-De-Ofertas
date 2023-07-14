@@ -10,7 +10,8 @@
     "lint:fix": "npx eslint --ext .ts src/ --fix",
     "build": "tsup src --out-dir build",
     "test": "vitest run --dir src/use-cases",
-    "test:watch": "vitest --dir src/use-cases"
+    "test:watch": "vitest --dir src/use-cases",
+    "seed": "prisma db push && tsx prisma/seed/index.ts"
   },
   "keywords": [],
   "author": "",
