@@ -32,7 +32,7 @@ npm install
 3. Inicie o container do Docker com o banco de dados PostgreSQL, usando o Docker Compose:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 4. Execute o script que preencherá o banco de dados com registros iniciais de Usuários, Carteiras e Moedas.
