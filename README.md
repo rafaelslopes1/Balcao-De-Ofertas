@@ -331,16 +331,16 @@ Durante o desenvolvimento do projeto e ao analisar sua arquitetura e implementa�
 
 - Implementação de testes end-to-end que garantem o funcionamento integrado dos componentes do projeto, atendendo aos requisitos do produto.
 
-### 6. Otimização de desempenho
+### 5. Otimização de desempenho
 
 - Analisar a utilização do banco de dados e verificar consultas mais realizadas, o que permite a definição adequada de indices e outras técnicas de otimização.
 
 - Utilização de mecanismos de cache, como Redis, para armazenar dados acessados com frequência, reduzindo a carga do banco de dados e o tempo de resposta da API. Deve-se considerar estratégias adequadas de invalidação do cache para garantir a consistência e atualização dos dados.
 
-### 7. Validação e tratativas de erros
+### 6. Validação e tratativas de erros
 
 - Aprimorar a validação e respostas da API para requisições com dados incorretos ou ausentes no corpo, cabeçalho ou parâmetros de consulta, sendo mais específico.
 
-### 8. Melhoria na documentação
+### 7. Melhoria na documentação
 
 - Adicionar Swagger (OpenAPI) ou ferramenta similar no projeto, visando melhorar o nível de documentação do projeto e facilitar a interação com os endpoints. Isso facilita a integração de novos desenvolvedores na equipe.
