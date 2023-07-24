@@ -1,7 +1,5 @@
 # Balcão de Ofertas - API
 
-## Desafio Técnico para Eclipseworks
-
 Esta é uma RESTful API para o Balcão de Ofertas, um recurso do aplicativo voltado para uma blockchain. A API fornece serviços para listar ofertas, criar ofertas e deletar ofertas. Ela foi desenvolvida utilizando o framework Fastify e o banco de dados PostgreSQL.
 
 ## Configurações do ambiente
@@ -20,7 +18,7 @@ Certifique-se de ter os seguintes softwares instalados em seu sistema:
 1. Com o terminal aberto, acesse o diretório do projeto:
 
 ```bash
-cd desafio-eclipseworks
+cd Balcao-De-Ofertas
 ```
 
 2. Instale as dependências do projeto:
@@ -286,7 +284,7 @@ O Prisma Studio é uma ferramenta de desenvolvimento para gerenciamento de banco
 1. Com o terminal aberto, navegue até o diretório raiz do projeto.
 
 ```bash
-cd desafio-eclipseworks
+cd Balcao-De-Ofertas
 ```
 
 2. Execute o seguinte comando para abrir o Prisma Studio:
