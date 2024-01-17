@@ -1,6 +1,6 @@
 # Balcão de Ofertas - API
 
-Esta é uma RESTful API para o Balcão de Ofertas, um recurso do aplicativo voltado para uma blockchain. A API fornece serviços para listar ofertas, criar ofertas e deletar ofertas. Ela foi desenvolvida utilizando o framework Fastify e o banco de dados PostgreSQL.
+Esta é uma RESTful API para o Balcão de Ofertas, um recurso de aplicativo voltado para uma blockchain. A API fornece serviços para listar ofertas, criar ofertas e deletar ofertas. Ela foi desenvolvida utilizando o framework Fastify e o banco de dados PostgreSQL.
 
 ## Configurações do ambiente
 
